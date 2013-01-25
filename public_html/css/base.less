@@ -1,0 +1,92 @@
+@font-face {
+	font-family: code_light;
+	src: local(code_light), url('fonts/code_light.OTF') format('opentype');
+}
+
+body {
+	font-family: code_light;
+}
+a {
+	text-decoration: none;
+}
+#container {
+	overflow: hidden;
+	position: relative;
+	padding: 20px;
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.nav.home {
+	position: absolute;
+	left: 50px;
+	top: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	ol {
+		font-size: 30px;
+		letter-spacing: .5em;
+		list-style-type: none;
+		li { 
+			color: #FFF;
+			display: inline; 
+		}
+		li:active, li:hover {
+			font-weight: bold;
+		}
+	}
+}
+.nav.norm {
+	margin-top: auto;
+	margin-bottom: auto;
+	height: 400px;
+	width: 200px;
+	position: absolute;
+	ol {
+		font-size: 30px;
+		letter-spacing: .5em;
+		list-style-type: none;
+		line-height: 2.7em;
+		li { 
+			color: #FFF;
+			display: list-item; 
+		}
+		li:active, li:hover {
+			font-weight: bold;
+		}
+	}
+}
+#content {
+	float: left;
+}
+#footer {
+	clear: left;
+	padding-top: 5px;
+}
+
+.pix {
+	display: none;
+	width: 400px;
+	overflow: hidden;
+	float: left;
+	#left {
+		text-align: right;
+	}
+	#right {
+		text-align: left;
+	}
+}
+
+#about {
+	position: absolute;
+	right: 0px;
+	float: left;
+	width: 400px;
+	text-align: right;
+}
+#images {
+	img {
+		display: inline;
+		float: left;
+	}
+}

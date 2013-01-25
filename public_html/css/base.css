@@ -1,0 +1,89 @@
+@font-face {
+  font-family: code_light;
+  src: local(code_light), url('fonts/code_light.OTF') format('opentype');
+}
+body {
+  font-family: code_light;
+}
+a {
+  text-decoration: none;
+}
+#container {
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav.home {
+  position: absolute;
+  left: 50px;
+  top: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav.home ol {
+  font-size: 30px;
+  letter-spacing: .5em;
+  list-style-type: none;
+}
+.nav.home ol li {
+  color: #FFF;
+  display: inline;
+}
+.nav.home ol li:active,
+.nav.home ol li:hover {
+  font-weight: bold;
+}
+.nav.norm {
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 400px;
+  width: 200px;
+  position: absolute;
+}
+.nav.norm ol {
+  font-size: 30px;
+  letter-spacing: .5em;
+  list-style-type: none;
+  line-height: 2.7em;
+}
+.nav.norm ol li {
+  color: #FFF;
+  display: list-item;
+}
+.nav.norm ol li:active,
+.nav.norm ol li:hover {
+  font-weight: bold;
+}
+#content {
+  float: left;
+}
+#footer {
+  clear: left;
+  padding-top: 5px;
+}
+.pix {
+  display: none;
+  width: 400px;
+  overflow: hidden;
+  float: left;
+}
+.pix #left {
+  text-align: right;
+}
+.pix #right {
+  text-align: left;
+}
+#about {
+  position: absolute;
+  right: 0px;
+  float: left;
+  width: 400px;
+  text-align: right;
+}
+#images img {
+  display: inline;
+  float: left;
+}
