@@ -1,11 +1,11 @@
-$(window).load(function(){
+$(window).load(function() {
     activeNav();
     gohome();
 });
 
 
 function activeNav(){
-    $('.nav ol li').each(function(){
+    $('.nav ol li').each(function() {
         var theName = $(this).text();
 	 console.log(theName);
         $(this).attr('onClick','go'+theName+'()');
@@ -17,31 +17,38 @@ function activeNav(){
 }
 
 function gohome(){
-        $('#content').css('overflow-x','visible').html('<div class="pix" id="left"></div><div class="pix" id="right"></div>');
-        $('<img src="img/front_3.jpg" height=640/>').appendTo('#left');
-	 $('<img src="img/front_2.jpg" height=640/>').appendTo('#right');
-	 $('.pix').fadeIn(1500);
-	 $('.nav').attr('class','nav home');
+    $('#content').css('overflow-x','visible').html('<div class="pix" id="left"></div><div class="pix" id="right"></div>');
+    $('<img src="img/front_3.jpg" height=640/>').appendTo('#left');
+    $('<img src="img/front_2.jpg" height=640/>').appendTo('#right');
+    $('.pix').fadeIn(1500);
+    $('.nav').attr('class','nav home');
 }
 
 function goabout(){
-	 $('#content').css('overflow-x','visible').html('\
-		<div class="pix" id="left"></div> \
-		<div id="about"> \
-			<h1>JESSICA KWOK</h1> \
-			<h2>Artist Statement</h2> \
-			<div id="aState"> \
-				<p> \
-					In creating art, I hope to document the fleeting moments of beauty that we tend to disregard when we are enduring much less forgiving stages of life.  In preserving the irretrievable, I deliver a memory as a memory.  Living in the past is inconducive; thus the idea is to allow a bridge from better times to the current and inescapable present. \
-				</p> \
-			</div> \
-			<h2><a href="cv_Kwok_Jessica.pdf" target="_blank">Resume</a></h2> \
-			<h2><a href="mailto:jk3405@nyu.edu" target="_blank">Contact</a></h2> \
-		</div>');
-	 $('.nav').attr('class','nav norm').hide();
-	 $('<img src="img/front_1.jpg" height=640/>').appendTo('.pix');
-	 $('.pix').fadeIn(1500).mouseover(function(){$('.nav').fadeIn(250);});
-	 $('#about').mouseover(function(){$('.nav').fadeOut(500);});
+    $('#content').css('overflow-x','visible').html('\
+        <div class="pix" id="left"></div> \
+        <div id="about"> \
+            <h1>JESSICA KWOK</h1> \
+            <h2>Artist Statement</h2> \
+            <div id="aState"> \
+                <p> \
+                I hope to document the fleeting moments of beauty that we often disregard when we are enduring much less forgiving stages of life. \
+                </p> \
+                <p> \
+                In preserving the irretrievable, I deliver a memory as a memory.  Living in the past is inconducive; thus the idea is to allow a bridge from better times to the inescapable present. \
+                </p> \
+                <br /> \
+                <p> \
+                I have a BA in mathematics from NYU Courant.  People often ask if I am trying to incorporate math into art.  I say no, because they are simultaneously separate things and also already the same thing. \
+                </p> \
+            </div> \
+            <h2><a href="cv_Kwok_Jessica.pdf" target="_blank">Resume</a></h2> \
+            <h2><a href="mailto:jk3405@nyu.edu" target="_blank">Contact</a></h2> \
+        </div>');
+    $('.nav').attr('class','nav norm').hide();
+    $('<img src="img/front_1.jpg" height=640/>').appendTo('.pix');
+    $('.pix').fadeIn(1500).mouseover(function(){$('.nav').fadeIn(250);});
+    $('#about').mouseover(function(){$('.nav').fadeOut(500);});
 }
 
 function gophoto(){
@@ -73,4 +80,3 @@ function isGallery(set_id){
 	$('#images').mouseleave(function(){$('.nav').fadeIn(250);});
 	$('#images').mouseover(function(){$('.nav').fadeOut(500);});
 }
-

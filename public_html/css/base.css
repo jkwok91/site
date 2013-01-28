@@ -96,6 +96,9 @@ a {
   width: 480px;
   text-align: right;
 }
+#about #aState {
+  letter-spacing: 2px;
+}
 #images {
   white-space: nowrap;
 }
