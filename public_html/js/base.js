@@ -17,31 +17,31 @@ function activeNav(){
 }
 
 function gohome(){
-        $('#content').html('<div class="pix" id="left"></div><div class="pix" id="right"></div>');
-        $('<img src="img/front_3.jpg" height=600/>').appendTo('#left');
-	 $('<img src="img/front_2.jpg" height=600/>').appendTo('#right');
+        $('#content').css('overflow-x','visible').html('<div class="pix" id="left"></div><div class="pix" id="right"></div>');
+        $('<img src="img/front_3.jpg" height=640/>').appendTo('#left');
+	 $('<img src="img/front_2.jpg" height=640/>').appendTo('#right');
 	 $('.pix').fadeIn(1500);
 	 $('.nav').attr('class','nav home');
 }
 
 function goabout(){
-	 $('#content').html('\
+	 $('#content').css('overflow-x','visible').html('\
 		<div class="pix" id="left"></div> \
 		<div id="about"> \
 			<h1>JESSICA KWOK</h1> \
 			<h2>Artist Statement</h2> \
 			<div id="aState"> \
 				<p> \
-					In creating art, I hope to document the fleeting TEMPORARY TEXT TEMPORARY TEXT TEMPORARY TEXT TEMPORARY TEXT TEMPORARY TEXT TEMPORARY TEXT TEMPORARY TEXT TEMPORARY TEXT TEMPORARY TEXT TEMPORARY TEXT TEMPORARY TEXT TEMPORARY TEXT moments of beauty that we tend to ignore when we are enduring much less forgiving stages of life.  In preserving what seems irretrievable, I hope to deliver a memory as a memory.  Living in the past is inconducive; thus the idea behind my art is to bridge better times with the current and inescapable present. \
+					In creating art, I hope to document the fleeting moments of beauty that we tend to disregard when we are enduring much less forgiving stages of life.  In preserving the irretrievable, I deliver a memory as a memory.  Living in the past is inconducive; thus the idea is to allow a bridge from better times to the current and inescapable present. \
 				</p> \
 			</div> \
-			<h2>Resume</h2> \
-			<h2><a href="mailto:jk3405@nyu.edu">Contact</a></h2> \
+			<h2><a href="cv_Kwok_Jessica.pdf" target="_blank">Resume</a></h2> \
+			<h2><a href="mailto:jk3405@nyu.edu" target="_blank">Contact</a></h2> \
 		</div>');
 	 $('.nav').attr('class','nav norm').hide();
-	 $('<img src="img/front_1.jpg" height=600/>').appendTo('.pix');
-	 $('.pix').fadeIn(1500).mouseover(function(){$('.nav').fadeIn(750);});
-	 $('#about').mouseover(function(){$('.nav').fadeOut(350);});
+	 $('<img src="img/front_1.jpg" height=640/>').appendTo('.pix');
+	 $('.pix').fadeIn(1500).mouseover(function(){$('.nav').fadeIn(250);});
+	 $('#about').mouseover(function(){$('.nav').fadeOut(500);});
 }
 
 function gophoto(){
@@ -56,7 +56,7 @@ function gopaint(){
 
 function isGallery(set_id){
 	$('.nav').attr('class','nav norm');
-	$('#content').html('\
+	$('#content').css('overflow-x','scroll').html('\
 		<div id="leftArr"></div> \
 		<div id="images"></div> \
 		<div id="rightArr"></div>');
@@ -64,8 +64,13 @@ function isGallery(set_id){
 	$.getJSON(URL_str, function(data){
 		$.each(data.photoset.photo, function(i, item){
 			var photo = 'http://farm' + item.farm + '.staticflickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_z.jpg';
-			$('<img />').attr({src: photo, alt: item.title, title: item.title, height: 600}).appendTo("#images");
+			$('<img />').attr({src: photo, alt: item.title, title: item.title, height: 640}).appendTo("#images");
 		});
 	});
+
+	//ANNOYINGLY JUMPY NAVIGATION
+	$('#footer').mouseover(function(){$('.nav').fadeIn(250);});
+	$('#images').mouseleave(function(){$('.nav').fadeIn(250);});
+	$('#images').mouseover(function(){$('.nav').fadeOut(500);});
 }
 

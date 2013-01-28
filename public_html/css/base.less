@@ -1,10 +1,21 @@
 @font-face {
 	font-family: code_light;
-	src: local(code_light), url('fonts/code_light.OTF') format('opentype');
+	src: local(code-light), url('fonts/code_light.OTF') format('opentype');
+}
+
+@font-face {
+	font-family: code_bold;
+	src: local(code-bold), url('fonts/code_bold.OTF') format('opentype');
 }
 
 body {
-	font-family: code_light;
+	font-family: code-light;
+}
+h1,h2,h3 {
+	font-family: code-bold;
+}
+h1 {
+	font-size: 50px;
 }
 a {
 	text-decoration: none;
@@ -13,33 +24,36 @@ a {
 	overflow: hidden;
 	position: relative;
 	padding: 20px;
-	width: 800px;
+	width: 960px;
 	margin-left: auto;
 	margin-right: auto;
 }
 .nav.home {
 	position: absolute;
-	left: 50px;
+	left: 75px;
 	top: 300px;
 	margin-left: auto;
 	margin-right: auto;
+	white-space: nowrap;
 	ol {
 		font-size: 30px;
 		letter-spacing: .5em;
+		word-spacing: 1.25em;
 		list-style-type: none;
 		li { 
 			color: #FFF;
-			display: inline; 
+			display: inline;
 		}
 		li:active, li:hover {
-			font-weight: bold;
+			font-family: code-bold;
+			cursor: pointer;
 		}
 	}
 }
 .nav.norm {
 	margin-top: auto;
 	margin-bottom: auto;
-	height: 400px;
+	height: 640px;
 	width: 200px;
 	position: absolute;
 	ol {
@@ -52,12 +66,12 @@ a {
 			display: list-item; 
 		}
 		li:active, li:hover {
-			font-weight: bold;
+			font-family: code-bold;
+			cursor: pointer;
 		}
 	}
 }
 #content {
-	float: left;
 }
 #footer {
 	clear: left;
@@ -66,7 +80,7 @@ a {
 
 .pix {
 	display: none;
-	width: 400px;
+	width: 480px;
 	overflow: hidden;
 	float: left;
 	#left {
@@ -81,12 +95,12 @@ a {
 	position: absolute;
 	right: 0px;
 	float: left;
-	width: 400px;
+	width: 480px;
 	text-align: right;
 }
 #images {
+	white-space: nowrap;
 	img {
 		display: inline;
-		float: left;
 	}
 }
