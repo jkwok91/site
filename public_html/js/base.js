@@ -5,27 +5,27 @@ $(window).load(function() {
 
 
 function activeNav(){
-    $('.nav ol li').each(function() {
+    nItem = $('div.nav ol li');
+    nItem.each(function() {
         var theName = $(this).text();
-	 console.log(theName);
         $(this).attr('onClick','go'+theName+'()');
     });
-    $('.nav ol li').click(function(){
-        $('.nav li').attr('id','');
+    nItem.click(function(){
+        nItem.attr('id','');
         $(this).attr('id','current');
     });
 }
 
 function gohome(){
-    $('#content').css('overflow-x','visible').html('<div class="pix" id="left"></div><div class="pix" id="right"></div>');
+    $('div#content').css('overflow-x','visible').html('<div class="pix" id="left"></div><div class="pix" id="right"></div>');
     $('<img src="img/front_3.jpg" height=640/>').appendTo('#left');
     $('<img src="img/front_2.jpg" height=640/>').appendTo('#right');
-    $('.pix').fadeIn(1500);
-    $('.nav').attr('class','nav home');
+    $('div.pix').fadeIn(1500);
+    $('div.nav').attr('class','nav home');
 }
 
 function goabout(){
-    $('#content').css('overflow-x','visible').html('\
+    $('div#content').css('overflow-x','visible').html('\
         <div class="pix" id="left"></div> \
         <div id="about"> \
             <h1>JESSICA KWOK</h1> \
@@ -45,10 +45,10 @@ function goabout(){
             <h2><a href="cv_Kwok_Jessica.pdf" target="_blank">Resume</a></h2> \
             <h2><a href="mailto:jk3405@nyu.edu" target="_blank">Contact</a></h2> \
         </div>');
-    $('.nav').attr('class','nav norm').hide();
-    $('<img src="img/front_1.jpg" height=640/>').appendTo('.pix');
-    $('.pix').fadeIn(1500).mouseover(function(){$('.nav').fadeIn(250);});
-    $('#about').mouseover(function(){$('.nav').fadeOut(500);});
+    $('div.nav').attr('class','nav norm').hide();
+    $('<img src="img/front_1.jpg" height=640/>').appendTo('div.pix');
+    $('div.pix').fadeIn(1500).mouseover(function(){$('div.nav').fadeIn(250);});
+    $('div#about').mouseover(function(){$('div.nav').fadeOut(500);});
 }
 
 function gophoto(){
@@ -62,8 +62,9 @@ function gopaint(){
 }
 
 function isGallery(set_id){
-	$('.nav').attr('class','nav norm');
-	$('#content').css('overflow-x','scroll').html('\
+	var navig = $('div.nav');
+	navig.attr('class','nav norm');
+	$('div#content').css('overflow-x','scroll').html('\
 		<div id="leftArr"></div> \
 		<div id="images"></div> \
 		<div id="rightArr"></div>');
@@ -76,7 +77,6 @@ function isGallery(set_id){
 	});
 
 	//ANNOYINGLY JUMPY NAVIGATION
-	$('#footer').mouseover(function(){$('.nav').fadeIn(250);});
-	$('#images').mouseleave(function(){$('.nav').fadeIn(250);});
-	$('#images').mouseover(function(){$('.nav').fadeOut(500);});
+	$('div#footer').mouseover(function(){navig.fadeIn(250);});
+	$('div#images').mouseleave(function(){navig.fadeIn(250);}).mouseover(function(){navig.fadeOut(500);});
 }

@@ -1,18 +1,13 @@
-@font-face {
-  font-family: code_light;
-  src: local(code-light), url('fonts/code_light.OTF') format('opentype');
-}
-@font-face {
-  font-family: code_bold;
-  src: local(code-bold), url('fonts/code_bold.OTF') format('opentype');
-}
+@import "fonts/code-bold-style.css";
+
+@import "fonts/code-light-style.css";
 body {
-  font-family: code-light;
+  font-family: "Code-Light";
 }
 h1,
 h2,
 h3 {
-  font-family: code-bold;
+  font-family: "Code-Bold";
 }
 h1 {
   font-size: 50px;
@@ -37,13 +32,13 @@ a {
   white-space: nowrap;
 }
 .nav.home ol {
+  color: #FFF;
   font-size: 30px;
   letter-spacing: .5em;
   word-spacing: 1.25em;
   list-style-type: none;
 }
 .nav.home ol li {
-  color: #FFF;
   display: inline;
 }
 .nav.home ol li:active,

@@ -1,18 +1,11 @@
-@font-face {
-	font-family: code_light;
-	src: local(code-light), url('fonts/code_light.OTF') format('opentype');
-}
-
-@font-face {
-	font-family: code_bold;
-	src: local(code-bold), url('fonts/code_bold.OTF') format('opentype');
-}
+@import "fonts/code-bold-style.css";
+@import "fonts/code-light-style.css";
 
 body {
-	font-family: code-light;
+	font-family: "Code-Light";
 }
 h1,h2,h3 {
-	font-family: code-bold;
+	font-family: "Code-Bold";
 }
 h1 {
 	font-size: 50px;
@@ -28,21 +21,13 @@ a {
 	margin-left: auto;
 	margin-right: auto;
 }
-.nav.home {
-	position: absolute;
-	left: 75px;
-	top: 300px;
-	margin-left: auto;
-	margin-right: auto;
-	white-space: nowrap;
+.nav {
 	ol {
-		font-size: 30px;
 		letter-spacing: .5em;
-		word-spacing: 1.25em;
 		list-style-type: none;
-		li { 
+		font-size: 30px;
+		li {
 			color: #FFF;
-			display: inline;
 		}
 		li:active, li:hover {
 			font-family: code-bold;
@@ -50,24 +35,30 @@ a {
 		}
 	}
 }
-.nav.norm {
+.home {
+	position: absolute;
+	left: 75px;
+	top: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	white-space: nowrap;
+	ol {
+		word-spacing: 1.25em;
+		li { 
+			display: inline;
+		}
+	}
+}
+.norm {
 	margin-top: auto;
 	margin-bottom: auto;
 	height: 640px;
 	width: 200px;
 	position: absolute;
 	ol {
-		font-size: 30px;
-		letter-spacing: .5em;
-		list-style-type: none;
 		line-height: 2.7em;
 		li { 
-			color: #FFF;
 			display: list-item; 
-		}
-		li:active, li:hover {
-			font-family: code-bold;
-			cursor: pointer;
 		}
 	}
 }
