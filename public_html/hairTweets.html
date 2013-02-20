@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>NEW HAIR</title>
+    <link rel="stylesheet" type="text/less" href="css/hair.less">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/less-1.3.3.min.js"></script>
+    <script type="text/javascript" src="js/isotope/jquery.isotope.js"></script>
+    <script type="text/javascript" src="js/hair2.js"></script>
+    <script type="text/javascript">
+        $(window).load(function(){
+            $('div#content').isotope({
+                itemSelector : '.tweet',
+                layoutMode : 'fitRows',
+                //getSortData : {
+                    //width : function( $elem ) {
+                        //return $elem.width();
+                    //}
+                //}
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="content"></div>
+</body>
+</html>
