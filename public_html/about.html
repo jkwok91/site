@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>JESSICA KWOK</title>
+    <link rel="stylesheet" type="text/less" href="css/base.less">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/less-1.3.3.min.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('div#content').css('overflow-x','visible');
+            $('div.pix').fadeIn(1500).mouseover(function(){$('div.nav').fadeIn(250);});
+            $('div#about').mouseover(function(){$('div.nav').fadeOut(500);});
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div class="nav norm">
+            <ol>
+                <li><a href="jessica.html">home</a></li>
+                <li>about</li>
+                <li><a href="photo.html">photo</a></li>
+                <li><a href="paint.html">paint</a></li>
+            </ol>            
+        </div>
+        <div id="content">
+        <div class="pix" id="left">
+            <img src="img/front_1.jpg" height=640/>
+        </div>
+        <div id="about">
+            <h1>JESSICA KWOK</h1>
+            <h2>Artist Statement</h2>
+            <div id="aState">
+                <p>
+                I deliver a memory as a memory.  Attempting to live in the past is inconducive; thus the idea is to allow only a holographic bridge.
+                </p>
+                <p>
+                I have a BA in mathematics from NYU Courant.  People often ask if I am trying to incorporate math into art.  I say no, because they are simultaneously separate and already the same.
+                </p>
+            </div>
+            <h2><a href="cv_Kwok_Jessica.pdf" target="_blank">Resume</a></h2>
+            <h2><a href="mailto:jk3405@nyu.edu" target="_blank">Contact</a></h2>
+        </div>
+        </div>
+	<div id="footer">
+	    <span><a href="index.html">Copyright 2013 Jessica Kwok</a></span>
+	</div>
+    </div>    
+</body>
+</html>
