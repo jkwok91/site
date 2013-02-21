@@ -23,7 +23,10 @@ for (var i = 2; i <= 20; i++) {
 //print prime breakdown of number, and then number
 console.log(bigNumber);
 console.log(multPrimes(bigNumber));
-
+$(document).ready(function(){
+    $('div#results').text('the smallest number that divides all the numbers from 1-20 is:');
+    $('div#results2').text(multPrimes(bigNumber));
+});
 
 //helper functions here
 
